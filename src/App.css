@@ -1,0 +1,262 @@
+ /* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; 
+}  
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  z-index: 1000; 
+}
+
+.content {
+  padding-top: 500px; 
+}
+
+.card{
+  padding-top: 500px;
+  width: 40px;
+  padding: 1rem;
+  height:  13rem;
+  border-radius: 5%;
+ 
+}
+
+
+.grid{
+  margin: 0 auto;
+max-width: 90%;
+display: grid;
+place-items: center;
+padding: 3rem;
+grid-template-columns: 0.5fr 0.5fr 0.5fr;
+grid-template-rows: 1fr 1fr 1fr;
+grid-column-gap: 2rem;
+grid-row-gap: 2rem;
+background:#fafafa;
+align-items: stretch;
+padding-top: 100px;
+/* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+border-radius: .5rem;
+}
+.container{
+max-width: 120rem;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+grid-template-rows: 1fr 1fr 1fr;  
+margin: 0 auto;
+}
+/* grid-template-columns: 1fr 1fr 1fr;
+gap: 1.6rem;
+padding-top: 100px;
+} */
+.card-brand{
+  font-size: 1.2rem;
+  font-weight: 350;
+  color: #524c4c;
+
+}
+.btn-primary{ 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-size: 1rem;
+}
+.card-button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 55%;
+  /* transform: translateX(-50%); */
+  width: 100%;
+}
+
+.product-card{
+  padding-top: 500px;
+  width: 40px;
+  padding: 1rem;
+  height:  13rem;
+  border-radius: 5%;
+  margin: 100px;
+}
+
+/* <---------------------------------------Product CSS--------------------------------------------------------------> */
+
+ 
+.containers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+} 
+.left-column-img{
+  vertical-align: middle;
+  width: 40rem;
+  padding-top: 6rem;
+  margin: 20px;
+}
+.left-column {
+  width: 40%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 60%;
+  margin-top: 60px;
+}
+/* Left Column */
+.left-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+
+.product-description h5 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #86939E;
+  line-height: 24px;
+}
+.release-date{
+  font-weight: 300;
+  
+}
+/* Cable Configuration */
+
+.cable-config a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+ 
+.cable-config a:before {
+  content: "?";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+/* Product Price */
+.product-price {
+  /* display: flex;
+  align-items: center; 
+   flex-direction: column;
+  align-items: flex-start; */
+  display: grid;
+  justify-items: start;
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-gap: 10px 4px;
+
+}
+.update-button{
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 400;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #0d6efd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+/* Responsive */
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+ 
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
+/* <....................................Add Product................................................> */
+
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-container .image-control {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
